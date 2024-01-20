@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Sen", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.button {
+    border: 2px solid black;
+}
+
+/* HEADER */
+.links {
+    display: flex;
+    gap: 2em;
+}
+
+/* HERO SECTION */
+.banner {
+    background: rgba(246, 239, 227, 1);
+}
+
+.banner-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 99;
+}
+
+.text-image {
+    position: absolute;
+    z-index: -1;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    max-width: 10em;
+    font-weight: bold;
+}
+
+.design {
+    display: none;
+}
+
+/* YIELD SECTION */
+.yield-div {
+    position: relative;
+    z-index: 4;
+}
+
+.design-1 {
+    position: absolute;
+    left: 0%;
+    z-index: -99;
+    /* display: none; */
+}
+
+#counter {
+    font-size: 2em;
+    text-align: center;
+    /* Adjust to control when the counter starts */
+}
+
+.design-2 {
+    position: absolute;
+    right: 0%;
+    /* display: none; */
+}
+
+/* PERFROMANCE */
+.perform-text {
+    position: relative;
+    z-index: 99;
+}
+
+.perform-text p {
+    max-width: 30em
+}
+
+.perform-img {
+    position: absolute;
+    width: 80%;
+    z-index: -99;
+}
+
+.perform-img img {
+    width: 15%;
+}
+
+/* leap */
+.leap-img img {
+    width: 100%;
+}
+
+.leap-img h1 {
+    font-size: 1.3rem;
+}
+
+.leap-text img {
+    width: 20%;
+}
+
+/* CLIENT */
+.client-text ul li:first-child {
+    list-style: disc;
+    font-size: 1.5rem;
+}
+
+.client-text ul li:last-child {
+    max-width: 30em;
+}
+
+.client-img img {
+    width: 100%;
+}
+
+/* TESTIMONIAL */
+.test img {
+    width: 10%;
+}
+
+.test p {
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+/* SECURE */
+.secure-text p {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+/* WHO WE ARE SECTION */
+.who-text {
+    position: relative;
+    z-index: 99;
+}
+
+.who-banner-img img {
+    width: 100%;
+}
+
+.who-image {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 20%;
+    right: 0;
+    left: 10em;
+    bottom: 10em;
+}
+
+.who-image img {
+    width: 100%;
+}
+
+.who-text h1 span {
+    color: blue;
+}
+
+.who-text p {
+    font-size: 1.2rem;
+    margin-bottom: 4em;
+}
+
+
+.vision-mission p {
+    width: 100%;
+}
+
+/* BELIEF SECTION */
+.belief-image img {
+    width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    position: relative;
+}
+
+.footer-img {
+    position: absolute;
+    right: 5em;
+    bottom: 7em;
+}
+
+.footer-links p a {
+    color: white;
+}
+
+.footer-links p a:hover {
+    color: blue;
+}
+
+/* CONTACT */
+.showed {
+    display: none;
+}
+
+.textarea textarea {
+    resize: none;
+}
+
+/* VERIFY */
+
+@media only screen and (min-width: 768px) {
+    .banner-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .banner-img img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .banner {
+        position: relative;
+    }
+
+    .design {
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 45%;
+    }
+
+    .leap-img h1 {
+        font-size: 2.5rem;
+    }
+
+    .leap-text img {
+        width: 40%;
+    }
+
+    .client-img img {
+        width: 500px;
+    }
+
+    .design-1 {
+        display: block;
+        left: 20%;
+        position: absolute;
+    }
+
+    .design-2 {
+        display: block;
+        position: absolute;
+        right: 20%;
+    }
+
+    .vision {
+        border-right: 5px solid black;
+    }
+
+}
+
+@media only screen and (min-width: 991px) {
+    .banner-text h1 {
+        font-size: 3rem;
+    }
+
+    .banner-img img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .leap-img h1 {
+        font-size: 3rem;
+    }
+
+    .client-text ul li:first-child {
+        list-style: disc;
+        font-size: 2rem;
+    }
+
+    .client-img img {
+        width: 700px;
+    }
+
+    /* CONTACT */
+    .contact-img {
+        position: relative;
+    }
+
+    .contact-text {
+        position: absolute;
+        right: 10em;
+        top: 4em;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .showed {
+        display: block;
+
+    }
+}

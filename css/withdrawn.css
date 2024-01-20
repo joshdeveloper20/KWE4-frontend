@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Sen", sans-serif;
+}
+
+:root {
+  --main-color: #f2f2f2;
+  --profile-name-col: #989898;
+  --gray-col-1: #b5b5b5;
+  --horizontal-col-1: #dadada;
+  --horizontal-col-2: #e6e6e6;
+  --dashboard-blue: #2946e9;
+  --sidebar-bg: #112699;
+  --menubar-col: #dadada;
+  --online-bg: #15ca62;
+  --sidebar-hover: #ffee59;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+/* HEADER STYLING STARTS */
+header {
+  background: #fff;
+  padding: 1rem 4rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header .header-container {
+  margin-left: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms;
+}
+
+header .header-container.expand {
+  margin-left: 0;
+}
+
+header .header-container .header-img {
+  position: relative;
+}
+
+header .header-container .header-img::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: var(--online-bg);
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  right: -10px;
+}
+
+header .header-container .header-img img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+header .header-container i {
+  font-size: 24px;
+  color: var(--menubar-col);
+  cursor: pointer;
+}
+
+/* HEADER STYLING ENDS */
+
+/* SIDEBAR STYLES STARTS */
+
+.sidebar {
+  margin: 0;
+  width: auto;
+  position: fixed;
+  top: 0em;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--sidebar-bg);
+  transition: 300ms;
+  z-index: 4;
+}
+
+.sidebar-container {
+  padding: 20px 20px;
+  position: relative;
+}
+
+.fa-xmark {
+  visibility: hidden;
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar.remove {
+  left: -345px;
+}
+
+.logo img {
+  width: 50%;
+  margin-bottom: 3.5rem;
+}
+
+.sidemenus {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidemenus li a {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.8;
+  display: flex;
+  gap: 0.7rem;
+  line-height: 1.5;
+  align-items: center;
+  transition: 300ms;
+  font-size: 1.7rem;
+}
+
+.sidemenus li .active {
+  color: yellow;
+  font-weight: bold;
+}
+
+.sidemenus li a:hover {
+  color: var(--sidebar-hover);
+}
+
+.sidemenus .list-with-children {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidemenus .list-with-children>a+i {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.submenu {
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+.submenu a {
+  margin-bottom: 2rem;
+}
+
+.submenu a:last-child {
+  margin-bottom: 0;
+}
+
+/* SIDEBAR STYLES ENDS */
+/* <<<<<<<<<<<<<<<<<MAIN STYLING STARTS HERE>>>>>>>>> */
+main {
+  background: var(--main-color);
+  min-height: 100vh;
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  transition: 300ms;
+  position: absolute;
+  z-index: 1;
+  margin-top: 4rem;
+  z-index: 1;
+  overflow: auto;
+}
+
+main.stretch {
+  width: 100%;
+  margin-left: 0px;
+}
+
+.main-content {
+  padding: 2rem 4rem;
+}
+
+/* <<<<<<<<<<<<<<<<<MAIN STYLING ENDS HERE>>>>>>>>> */
+.top-text {
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+
+.top-text h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.top-text p {
+  font-size: 1.8rem;
+  color: #666666;
+}
+
+.send-wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.send-wrapper>* {
+  width: 100%;
+}
+
+.limit-wrapper {
+  margin-bottom: 3rem;
+}
+
+.limit-wrapper p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.flexboxes {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.flexboxes>* {
+  flex-grow: 1;
+  border: none;
+  padding: 2.5rem 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.flexboxes button:first-child {
+  background-color: #eaeaea;
+  color: #112699;
+}
+
+.flexboxes button:last-child {
+  background-color: #d9d9d9;
+  color: #7c7c7c;
+}
+
+button.new-transfer {
+  background-color: #dbf3d1;
+  color: #112699;
+  padding: 2rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.search {
+  border: 1px solid #a2a2a2;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.search>* {
+  padding: 2rem 0;
+}
+
+.search i {
+  font-size: 2.5rem;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+
+.search input {
+  width: 100%;
+  margin-left: 2rem;
+  background: transparent;
+  font-size: 1.6rem;
+  color: #acacac;
+}
+
+.search input::placeholder {
+  font-size: 1.6rem;
+  color: #acacac;
+  font-weight: 500;
+}
+
+.account-detail {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: 6rem;
+}
+
+.account-detail span {
+  display: grid;
+  place-items: center;
+  background: #d9e2fb;
+  color: #7988cc;
+  font-size: 2.4rem;
+  font-weight: 600;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  margin-right: 2rem;
+}
+
+.account-detail .name-acc h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+}
+
+.account-detail .name-acc p {
+  font-size: 1.4rem;
+}
+
+/* <<<<<<<<<< POP MENU STYLING STARTS HERE >>>>>>>>>>>>>>> */
+
+.hidden {
+  display: none;
+}
+
+/* .overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+} */
+
+.popup-menu {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem 4rem;
+  position: relative;
+  margin-bottom: 7rem;
+}
+
+
+.popup-menu .times {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.limit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.limit p {
+  color: #666666;
+  font-size: 1.2rem;
+  padding: .7rem 0;
+}
+
+.limit p>span {
+  color: #000;
+}
+
+p.text-big {
+  font-size: 1.5rem;
+}
+
+p.text-colored {
+  background-color: #F1ADAD;
+  padding: .7rem 1rem;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #F2FBEE;
+  padding: 2rem 4rem;
+  margin-top: 1rem;
+}
+
+.balance .bal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance .bal .bal-head {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.balance .bal .bal-data {
+  color: #666666;
+  font-size: 1.3rem;
+}
+
+.input-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-container>.input-group {
+  flex-basis: 45%;
+  margin-bottom: 2rem;
+}
+
+.input-container>.text-area {
+  flex-basis: 100%;
+}
+
+.input-group p {
+  font-size: 1.4rem;
+  color: #666666;
+}
+
+.input-group .input-wrapper {
+  border: 1px solid var(--horizontal-col-1);
+  padding: 0 1rem;
+  border-radius: 4px;
+  margin-top: 0.7rem;
+  background-color: #F7F7F7;
+}
+
+.input-group .input-wrapper input {
+  padding: 1rem 0;
+  padding-left: 1rem;
+  background-color: transparent;
+  width: 90%;
+}
+
+/* .input-group .input-wrapper input::placeholder{
+  padding-left: 1rem;
+} */
+
+.input-group .input-wrapper textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+}
+
+.input-group .input-wrapper textarea::placeholder {
+  padding-top: 1rem;
+}
+
+.input-group .input-wrapper span,
+.input-group .input-wrapper i {
+  font-size: 1.5rem;
+}
+
+.input-group .input-wrapper i {
+  margin-left: auto;
+}
+
+.beneficiary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+label.button {
+  display: inline-block;
+  background-color: #989898;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  position: relative;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+label.button::before {
+  position: absolute;
+  content: '';
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+input.checkbox:checked+label.button {
+  background-color: #B7D1F1;
+}
+
+input.checkbox:checked+label.button::before {
+  transform: translateX(30px);
+  background-color: #203EE8;
+}
+
+input.checkbox {
+  display: none;
+}
+
+.beneficiary p {
+  font-size: 1.3rem;
+}
+
+.navigation {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.navigation button {
+  cursor: pointer;
+}
+
+.back-btn {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: transparent;
+  margin-right: 2rem;
+}
+
+.next-btn {
+  background-color: #2946E9;
+  color: #fff;
+  padding: 1rem;
+  width: 150px;
+  border-radius: 4px;
+}
+
+/* <<<<<<<<<< POP MENU STYLING ENDS HERE >>>>>>>>>>>>>>> */
+
+/* <<<<<<<<<<<<<<<<<MAIN STYLING ENDS HERE>>>>>>>>> */
+
+/* <<<<<<<<<<< FOOTER STYLING STARTS HERE >>>>>>>>>>>>>> */
+footer {
+  background-color: #fff;
+  padding: 2rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* <<<<<<<<<<< FOOTER STYLING ENDS HERE >>>>>>>>>>>>>> */
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    left: 0px;
+  }
+
+  .sidebar.active {
+    left: -345px;
+    z-index: 4;
+  }
+
+  .fa-xmark {
+    visibility: visible;
+  }
+
+  main {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  header .header-container {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  .top-text h3 {
+    font-size: 2rem;
+  }
+
+  .top-text p {
+    font-size: 1.6rem;
+  }
+
+  .limit-wrapper p {
+    font-size: 1.4rem;
+  }
+
+  .flexboxes {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .account-detail {
+    margin-left: 0;
+  }
+
+  .account-detail .name-acc h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .account-detail .name-acc p {
+    font-size: 1.4rem;
+  }
+
+  .search {
+    padding: 0 1rem;
+  }
+
+  .search i {
+    font-size: 2rem;
+  }
+
+  .search input {
+    margin-left: 1rem;
+  }
+
+  .popup-menu {
+    background-color: #fff;
+    padding: 2rem 1rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  .limit {
+    flex-direction: column;
+  }
+
+  .balance {
+    padding: 2rem 1rem;
+  }
+
+  .balance .bal .bal-head {
+    font-size: 1.8rem;
+  }
+
+  .next-btn {
+    width: 100px;
+  }
+}

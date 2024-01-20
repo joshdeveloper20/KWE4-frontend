@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/invest.css">
+    <link rel="stylesheet" href="./icomoon/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/boxicons.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+
+<body class=" bg-light ">
+    <header>
+        <div class="header-container" id="header">
+            <i class="fa-solid fa-bars-staggered" id="toggle"></i>
+            <div class="header-img">
+                <img src="./images/user-06.jpg" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar active" id="sidebar">
+        <div class="sidebar-container">
+            <a href="./dashboard.html" class="logo"><img src="./images/logo.png" alt=""></a>
+            <i class="fa-solid fa-xmark" id="cancel"></i>
+
+            <ul class="sidemenus">
+                <li>
+                    <a href="./dashboard.html" class=" text-decoration-none"><i class="fa-solid fa-house"></i>
+                        Dashboard</a>
+                </li>
+                <li>
+                    <div class="list-with-children" data-list="1">
+                        <a href="#" class=" text-decoration-none"><i class="fa-regular fa-user"></i> Account</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                    <div class="submenu submenu-1">
+                        <a href="./update.html" class=" text-decoration-none">Update Profile</a>
+                        <a href="./forget-password.html" class=" text-decoration-none">Change Password</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="./invest.html" class=" text-decoration-none"><i class="fa-solid fa-dollar-sign"></i>
+                        Invest</a>
+                </li>
+
+                <li>
+                    <a href="./withdraw.html" class=" text-decoration-none"><i class="fa-regular fa-credit-card"></i>
+                        Withdraw</a>
+                </li>
+
+                <li>
+                    <a href="./automatic-investments.html" class=" text-decoration-none"><i
+                            class="fa-solid fa-rotate-right"></i> Automatic
+                        Investments</a>
+                </li>
+
+                <li>
+                    <a href="./transaction.html" class=" text-decoration-none active"><i class="fa-solid fa-wallet"></i>
+                        Transaction</a>
+                </li>
+
+                <li>
+                    <div class="list-with-children" data-list="2">
+                        <a href="#" class=" text-decoration-none"><i class="fa-regular fa-message"></i> Request</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="submenu submenu-2">
+                        <a href="#" class=" text-decoration-none">Request 1</a>
+                        <a href="#" class=" text-decoration-none">Request 2</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="./referrals.html" class=" text-decoration-none"><i class="fa-regular fa-user"></i>
+                        Referrals</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <div class="main-content">
+            <div class="popup-menu">
+                <div class="top-text">
+                    <h3>Quick Notes</h3>
+                    <ul>
+                        <li>
+                            Together we design the version of the product and engage
+                            quicdistribution method.
+                        </li>
+                        <li>Together we design the version of the product and engage</li>
+                    </ul>
+                </div>
+
+                <div class="tabbed-container">
+                    <div class="tabbed-header">
+                        <button class="tab__btn tab__btn-1 tab__btn-active" data-tab="1">
+                            <img src="./images/piggy-vest.png" class="piggy" alt="piggy img" />
+                            One-Off Subscription
+                        </button>
+                        <button class="tab__btn tab__btn-2" data-tab="2">
+                            <i class="fa-solid fa-rotate-left"></i> Automatic Investment
+                        </button>
+                        <button class="tab__btn tab__btn-3" data-tab="3">
+                            <i class="fa-solid fa-mobile-screen"></i> Bank Transfer
+                        </button>
+                    </div>
+
+                    <div class="tabbed-body">
+                        <div class="tabbed tabbed-1 tabbed-active">
+                            <span class="sub">
+                                <img src="./images/piggy-vest.png" class="piggy" alt="piggy img" />
+                                <p>One-Off Subscription</p>
+                            </span>
+
+                            <div class="amount">
+                                <p>Amount (NGN)</p>
+                                <div class="input-amount-wrapper">
+                                    <span>&#8358;</span>
+                                    <input type="text" placeholder="0" />
+                                </div>
+                            </div>
+
+                            <button class="proceed-btn">Proceed</button>
+                        </div>
+
+                        <div class="tabbed tabbed-2">
+                            <p class="text-1">
+                                Create a standing order to fund your investment at regular
+                                intervals
+                            </p>
+                            <p class="text-2">
+                                <i class="fa-solid fa-rotate-left"></i> Automatic Investment
+                            </p>
+                            <p class="text-3">Add a debit card to continue</p>
+                            <button class="proceed-btn">&plus;</button>
+                        </div>
+
+                        <div class="tabbed tabbed-3">
+                            <span class="sub">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                <p>Bank Transfer</p>
+                            </span>
+                            <p>
+                                Make bank transfers to top up your kwe4 investment account
+                            </p>
+
+                            <div class="amount">
+                                <p>Amount (NGN)</p>
+                                <div class="input-amount-wrapper">
+                                    <span>&#8358;</span>
+                                    <input type="text" placeholder="0" />
+                                </div>
+                            </div>
+
+                            <button class="proceed-btn">Initiate Bank Transfer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>KWE4 AFRICA LTD. All Right Reserved.</p>
+    </footer>
+
+    <script>
+        let sendBtn = document.getElementById('send')
+        let times = document.getElementById('times')
+        let topLayer = document.querySelector('.top-layer')
+        let popUp = document.querySelector('.popup-menu')
+        const tabs = document.querySelectorAll(".tab__btn");
+        const tabsContainer = document.querySelector(".tabbed-header");
+        const tabsContent = document.querySelectorAll(".tabbed");
+
+        sendBtn.addEventListener('click', function () {
+            if (popUp.classList.contains('hidden')) {
+                popUp.classList.remove('hidden')
+                topLayer.classList.add('hidden')
+            }
+        })
+
+        times.addEventListener('click', function () {
+            popUp.classList.add('hidden')
+            topLayer.classList.remove('hidden')
+        })
+
+        tabsContainer.addEventListener("click", function (e) {
+            const clicked = e.target.closest(".tab__btn");
+
+            if (!clicked) return;
+
+            tabs.forEach((t) => t.classList.remove("tab__btn-active"));
+            clicked.classList.add("tab__btn-active");
+
+            tabsContent.forEach((c) => c.classList.remove("tabbed-active"));
+
+            // Activate content area
+            document
+                .querySelector(`.tabbed-${clicked.dataset.tab}`)
+                .classList.add("tabbed-active");
+        });
+    </script>
+
+
+
+    <script src="./js/toggle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
